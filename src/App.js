@@ -44,10 +44,12 @@ function App() {
       <div className="calculator">
         <input type="text" value={input} readOnly className="display" />
         <div className="buttons">
+          <button className="operator" onClick={() => handleClick('(')}>(</button>
           <button className="function" onClick={handleClear}>C</button>
           <button className="function" onClick={handleDelete}>←</button>
-          <button className="operator" onClick={() => handleClick('(')}>(</button>
+          <button className="function" onClick={() => handleClick('Math.PI')}>π</button>
           <button className="operator" onClick={() => handleClick(')')}>)</button>
+
 
           <button className="function" onClick={() => handleClick('sin(')}>sin</button>
           <button className="function" onClick={() => handleClick('cos(')}>cos</button>
@@ -77,7 +79,7 @@ function App() {
           <button className="function" onClick={() => handleClick('ln(')}>ln</button>
           <button className="function" onClick={() => handleClick('√(')}>√</button>
           <button className="function" onClick={() => handleClick('^')}>^</button>
-          <button className="function" onClick={() => handleClick('Math.PI')}>π</button>
+
 
         </div>
       </div>
